@@ -19,6 +19,7 @@
 		E418FD5B28CC16B700EA2D76 /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5A28CC16B700EA2D76 /* UpComingViewController.swift */; };
 		E418FD5D28CC16D000EA2D76 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5C28CC16D000EA2D76 /* SearchViewController.swift */; };
 		E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */; };
+		E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E418FD5A28CC16B700EA2D76 /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
 		E418FD5C28CC16D000EA2D76 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColletionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,15 @@
 		E418FD2628CC01D200EA2D76 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				E418FD6428CFF91500EA2D76 /* Managers */,
+				E418FD6328CFF90B00EA2D76 /* Resources */,
+				E418FD6228CFF8EB00EA2D76 /* Models */,
+				E418FD6028CFF8DB00EA2D76 /* Views */,
+				E418FD6128CFF8E300EA2D76 /* ViewModels */,
 				E418FD5728CC067400EA2D76 /* Controllers */,
 				E418FD2728CC01D200EA2D76 /* AppDelegate.swift */,
-				E418FD2928CC01D200EA2D76 /* SceneDelegate.swift */,
 				E418FD2B28CC01D200EA2D76 /* MainTabBarViewController.swift */,
+				E418FD2928CC01D200EA2D76 /* SceneDelegate.swift */,
 				E418FD3028CC01D400EA2D76 /* Assets.xcassets */,
 				E418FD3228CC01D400EA2D76 /* LaunchScreen.storyboard */,
 				E418FD3528CC01D400EA2D76 /* Info.plist */,
@@ -142,6 +149,42 @@
 				E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E418FD6028CFF8DB00EA2D76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E418FD6128CFF8E300EA2D76 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E418FD6228CFF8EB00EA2D76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E418FD6328CFF90B00EA2D76 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E418FD6428CFF91500EA2D76 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +321,7 @@
 				E418FD2C28CC01D200EA2D76 /* MainTabBarViewController.swift in Sources */,
 				E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */,
 				E418FD2828CC01D200EA2D76 /* AppDelegate.swift in Sources */,
+				E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */,
 				E418FD5B28CC16B700EA2D76 /* UpComingViewController.swift in Sources */,
 				E418FD2A28CC01D200EA2D76 /* SceneDelegate.swift in Sources */,
 				E418FD5928CC06B400EA2D76 /* HomeViewController.swift in Sources */,
