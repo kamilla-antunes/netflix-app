@@ -24,14 +24,23 @@ class ColletionViewTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemPink
-        contentView.addSubview(colletionView)
         
-        colletionView.delegate = self
-        colletionView.dataSource = self
+        configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    private func configure() {
+        colletionView.delegate = self
+        colletionView.dataSource = self
+        
+        addSubviews()
+    }
+    
+    private func addSubviews() {
+        contentView.addSubview(colletionView)
     }
     
     override func layoutSubviews() {

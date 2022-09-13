@@ -20,6 +20,7 @@
 		E418FD5D28CC16D000EA2D76 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5C28CC16D000EA2D76 /* SearchViewController.swift */; };
 		E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */; };
 		E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */; };
+		E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E418FD5C28CC16D000EA2D76 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColletionViewTableViewCell.swift; sourceTree = "<group>"; };
+		E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */,
+				E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				E418FD5D28CC16D000EA2D76 /* SearchViewController.swift in Sources */,
 				E418FD2C28CC01D200EA2D76 /* MainTabBarViewController.swift in Sources */,
 				E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */,
+				E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */,
 				E418FD2828CC01D200EA2D76 /* AppDelegate.swift in Sources */,
 				E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */,
 				E418FD5B28CC16B700EA2D76 /* UpComingViewController.swift in Sources */,
