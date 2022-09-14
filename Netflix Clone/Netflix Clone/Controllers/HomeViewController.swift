@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         
@@ -19,21 +18,40 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
-        view.addSubview(homeFeedTable)
         
-        homeFeedTable.delegate = self
-        homeFeedTable.dataSource = self
-        
-        let headerView = PosterHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 600))
-        homeFeedTable.tableHeaderView = headerView
+        configure()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         homeFeedTable.frame = view.bounds
+    }
+    
+    private func configure() {
+        view.backgroundColor = .systemBackground
+        view.addSubview(homeFeedTable)
+        
+        homeFeedTable.delegate = self
+        homeFeedTable.dataSource = self
+        
+        configureNavBar()
+        
+        let headerView = PosterHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 600))
+        homeFeedTable.tableHeaderView = headerView
+    }
+    
+    private func configureNavBar() {
+        var image = UIImage(named: "netflixLogo")
+        image = image?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+        ]
+        
+        navigationController?.navigationBar.tintColor = .label
     }
 }
 
@@ -60,5 +78,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         40
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
 }
