@@ -8,9 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending TV", "Upcoming Movies", "Top Rated"]
+    private let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending TV", "Upcoming Movies", "Top Rated"]
     
-    private let homeFeedTable: UITableView = {
+    private lazy var homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         
         table.register(ColletionViewTableViewCell.self, forCellReuseIdentifier: ColletionViewTableViewCell.identifier)

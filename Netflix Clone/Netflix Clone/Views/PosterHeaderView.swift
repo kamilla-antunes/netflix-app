@@ -8,7 +8,7 @@
 import UIKit
 
 class PosterHeaderView: UIView {
-    private let downloadButton: UIButton = {
+    private lazy var downloadButton: UIButton = {
         let button = UIButton()
         
         button.setTitle("Download", for: .normal)
@@ -20,7 +20,7 @@ class PosterHeaderView: UIView {
         return button
     }()
     
-    private let playButton: UIButton = {
+    private lazy var playButton: UIButton = {
         let button = UIButton()
         
         button.setTitle("Play", for: .normal)
@@ -32,7 +32,7 @@ class PosterHeaderView: UIView {
         return button
     }()
     
-    private let posterImageView: UIImageView = {
+    private lazy var posterImageView: UIImageView = {
         let imageView = UIImageView()
         
         imageView.contentMode = .scaleAspectFill

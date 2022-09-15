@@ -10,7 +10,7 @@ import UIKit
 class ColletionViewTableViewCell: UITableViewCell {
     static let identifier = "ColletionViewTableViewCell"
     
-    private let colletionView: UICollectionView = {
+    private lazy var colletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 140, height: 200)
