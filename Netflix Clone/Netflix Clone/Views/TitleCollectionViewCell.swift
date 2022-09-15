@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class TitleCollectionViewCell: UICollectionViewCell {
-    static let idetifier = "TitleCollectionViewCell"
+    static let identifier = "TitleCollectionViewCell"
     
     private lazy var posterImageView: UIImageView = {
         let imageView = UIImageView()
@@ -33,7 +33,9 @@ class TitleCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with model: String) {
-        guard let url = URL(string: model) else { return }
-        posterImageView.sd_setImage(with: url, completed: nil)
+        print(model)
+        
+//        guard let url = URL(string: model) else { return }
+//        posterImageView.sd_setImage(with: url, completed: nil)
     }
 }
