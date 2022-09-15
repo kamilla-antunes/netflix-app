@@ -24,85 +24,85 @@ enum APIError: Error {
 class APICaller {
     static let shared = APICaller()
     
-    func getTrendingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+    func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.trendingMoviesURL) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
                 completion(.success(results.results))
             } catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedToGetData))
             }
         }
         
         task.resume()
     }
     
-    func getTrendingTvs(completion: @escaping (Result<[Tv], Error>) -> Void) {
+    func getTrendingTvs(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.trendingTvsURL) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONDecoder().decode(TrendingTvsResponse.self, from: data)
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
                 completion(.success(results.results))
             } catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedToGetData))
             }
         }
         
         task.resume()
     }
     
-    func getUpcomingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+    func getUpcomingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.upcomingMoviesURL) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
                 completion(.success(results.results))
             } catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedToGetData))
             }
         }
         
         task.resume()
     }
     
-    func getPopularMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+    func getPopularMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.popularMoviesURL) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
                 completion(.success(results.results))
             } catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedToGetData))
             }
         }
         
         task.resume()
     }
     
-    func getTopRatedTvs(completion: @escaping (Result<[Tv], Error>) -> Void) {
+    func getTopRatedTvs(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.trendingTvsURL) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONDecoder().decode(TrendingTvsResponse.self, from: data)
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
                 completion(.success(results.results))
             } catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedToGetData))
             }
         }
         
