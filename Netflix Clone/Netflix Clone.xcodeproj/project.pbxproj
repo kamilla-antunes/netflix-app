@@ -21,6 +21,8 @@
 		E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */; };
 		E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */; };
 		E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */; };
+		E4F6104C28D384CD002ADA24 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104B28D384CD002ADA24 /* APICaller.swift */; };
+		E4F6104E28D388F0002ADA24 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104D28D388F0002ADA24 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColletionViewTableViewCell.swift; sourceTree = "<group>"; };
 		E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterHeaderView.swift; sourceTree = "<group>"; };
+		E4F6104B28D384CD002ADA24 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		E4F6104D28D388F0002ADA24 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 		E418FD6228CFF8EB00EA2D76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4F6104D28D388F0002ADA24 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 		E418FD6428CFF91500EA2D76 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E4F6104B28D384CD002ADA24 /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -323,11 +329,13 @@
 				E418FD5D28CC16D000EA2D76 /* SearchViewController.swift in Sources */,
 				E418FD2C28CC01D200EA2D76 /* MainTabBarViewController.swift in Sources */,
 				E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */,
+				E4F6104C28D384CD002ADA24 /* APICaller.swift in Sources */,
 				E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */,
 				E418FD2828CC01D200EA2D76 /* AppDelegate.swift in Sources */,
 				E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */,
 				E418FD5B28CC16B700EA2D76 /* UpComingViewController.swift in Sources */,
 				E418FD2A28CC01D200EA2D76 /* SceneDelegate.swift in Sources */,
+				E4F6104E28D388F0002ADA24 /* Movie.swift in Sources */,
 				E418FD5928CC06B400EA2D76 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
