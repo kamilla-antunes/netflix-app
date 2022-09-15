@@ -23,6 +23,8 @@
 		E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */; };
 		E4F6104C28D384CD002ADA24 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104B28D384CD002ADA24 /* APICaller.swift */; };
 		E4F6104E28D388F0002ADA24 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104D28D388F0002ADA24 /* Movie.swift */; };
+		E4F6105028D3CD4E002ADA24 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104F28D3CD4E002ADA24 /* Extensions.swift */; };
+		E4F6105228D3CF8E002ADA24 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6105128D3CF8E002ADA24 /* Tv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterHeaderView.swift; sourceTree = "<group>"; };
 		E4F6104B28D384CD002ADA24 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E4F6104D28D388F0002ADA24 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E4F6104F28D3CD4E002ADA24 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E4F6105128D3CF8E002ADA24 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				E4F6104D28D388F0002ADA24 /* Movie.swift */,
+				E4F6105128D3CF8E002ADA24 /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		E418FD6328CFF90B00EA2D76 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E4F6104F28D3CD4E002ADA24 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -333,9 +339,11 @@
 				E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */,
 				E418FD2828CC01D200EA2D76 /* AppDelegate.swift in Sources */,
 				E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */,
+				E4F6105028D3CD4E002ADA24 /* Extensions.swift in Sources */,
 				E418FD5B28CC16B700EA2D76 /* UpComingViewController.swift in Sources */,
 				E418FD2A28CC01D200EA2D76 /* SceneDelegate.swift in Sources */,
 				E4F6104E28D388F0002ADA24 /* Movie.swift in Sources */,
+				E4F6105228D3CF8E002ADA24 /* Tv.swift in Sources */,
 				E418FD5928CC06B400EA2D76 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
