@@ -15,6 +15,7 @@ struct Constants {
     static let upcomingMoviesURL = baseURL + "/3/movie/upcoming?api_key=" + API_KEY + "&language=en-US&page=1"
     static let popularMoviesURL = baseURL + "/3/movie/popular?api_key=" + API_KEY + "&language=en-US&page=1"
     static let topRatedTvsURL = baseURL + "/3/tv/top_rated?api_key=" + API_KEY + "&language=en-US&page=1"
+    static let searchMoviesURL = baseURL + "/3/discover/movie?api_key=" + API_KEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
     static let imageURL = "https://image.tmdb.org/t/p/w500/"
 }
 
@@ -95,6 +96,23 @@ class APICaller {
     
     func getTopRatedTvs(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.trendingTvsURL) else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
+            guard let data = data, error == nil else { return }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
+                completion(.success(results.results))
+            } catch {
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func getSearchMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
+        guard let url = URL(string: Constants.searchMoviesURL) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
