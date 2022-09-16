@@ -15,6 +15,7 @@ struct Constants {
     static let upcomingMoviesURL = baseURL + "/3/movie/upcoming?api_key=" + API_KEY + "&language=en-US&page=1"
     static let popularMoviesURL = baseURL + "/3/movie/popular?api_key=" + API_KEY + "&language=en-US&page=1"
     static let topRatedTvsURL = baseURL + "/3/tv/top_rated?api_key=" + API_KEY + "&language=en-US&page=1"
+    static let imageURL = "https://image.tmdb.org/t/p/w500/"
 }
 
 enum APIError: Error {
