@@ -12,7 +12,7 @@ class TitleTableViewCell: UITableViewCell {
     
     private lazy var playTitleButton: UIButton = {
         let button = UIButton()
-        let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
+        let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 28))
         
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(image, for: .normal)
