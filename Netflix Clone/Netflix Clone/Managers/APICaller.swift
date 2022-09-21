@@ -9,14 +9,15 @@ import Foundation
 
 struct Constants {
     static let API_KEY = "009c8af9c5894d8fdf81f75a4924ea2b"
-    static let baseURL = "https://api.themoviedb.org"
-    static let trendingMoviesURL = baseURL + "/3/trending/movie/day?api_key=" + API_KEY
-    static let trendingTvsURL = baseURL + "/3/trending/tv/day?api_key=" + API_KEY
-    static let upcomingMoviesURL = baseURL + "/3/movie/upcoming?api_key=" + API_KEY + "&language=en-US&page=1"
-    static let popularMoviesURL = baseURL + "/3/movie/popular?api_key=" + API_KEY + "&language=en-US&page=1"
-    static let topRatedTvsURL = baseURL + "/3/tv/top_rated?api_key=" + API_KEY + "&language=en-US&page=1"
-    static let searchMoviesURL = baseURL + "/3/discover/movie?api_key=" + API_KEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
+    static let baseURL = "https://api.themoviedb.org/3"
+    static let trendingMoviesURL = baseURL + "/trending/movie/day?api_key=" + API_KEY
+    static let trendingTvsURL = baseURL + "/trending/tv/day?api_key=" + API_KEY
+    static let upcomingMoviesURL = baseURL + "/movie/upcoming?api_key=" + API_KEY + "&language=en-US&page=1"
+    static let popularMoviesURL = baseURL + "/movie/popular?api_key=" + API_KEY + "&language=en-US&page=1"
+    static let topRatedTvsURL = baseURL + "/tv/top_rated?api_key=" + API_KEY + "&language=en-US&page=1"
+    static let searchMoviesURL = baseURL + "/discover/movie?api_key=" + API_KEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
     static let imageURL = "https://image.tmdb.org/t/p/w500/"
+    static let searchURL = baseURL + "/search/movie?api_key=" + API_KEY + "&query="
 }
 
 enum APIError: Error {
@@ -113,6 +114,25 @@ class APICaller {
     
     func getSearchMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: Constants.searchMoviesURL) else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
+            guard let data = data, error == nil else { return }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitlesResponse.self, from: data)
+                completion(.success(results.results))
+            } catch {
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func search(with query: String, completion: @escaping (Result<[Title], Error>) -> Void) {
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        
+        guard let url = URL(string: Constants.searchURL + query) else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else { return }
