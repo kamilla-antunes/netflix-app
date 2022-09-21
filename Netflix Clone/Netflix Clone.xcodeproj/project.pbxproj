@@ -21,6 +21,7 @@
 		E418FD5F28CC16E800EA2D76 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */; };
 		E418FD6628CFF94700EA2D76 /* ColletionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */; };
 		E418FD6828CFFFE100EA2D76 /* PosterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */; };
+		E4334D1628DBCB76002FA725 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4334D1528DBCB76002FA725 /* SearchResultsViewController.swift */; };
 		E4F6104C28D384CD002ADA24 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104B28D384CD002ADA24 /* APICaller.swift */; };
 		E4F6104E28D388F0002ADA24 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104D28D388F0002ADA24 /* Title.swift */; };
 		E4F6105028D3CD4E002ADA24 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6104F28D3CD4E002ADA24 /* Extensions.swift */; };
@@ -67,6 +68,7 @@
 		E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		E418FD6528CFF94700EA2D76 /* ColletionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColletionViewTableViewCell.swift; sourceTree = "<group>"; };
 		E418FD6728CFFFE100EA2D76 /* PosterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterHeaderView.swift; sourceTree = "<group>"; };
+		E4334D1528DBCB76002FA725 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		E4F6104B28D384CD002ADA24 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E4F6104D28D388F0002ADA24 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		E4F6104F28D3CD4E002ADA24 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -161,10 +163,8 @@
 		E418FD5728CC067400EA2D76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E418FD5828CC06B400EA2D76 /* HomeViewController.swift */,
-				E418FD5A28CC16B700EA2D76 /* UpComingViewController.swift */,
-				E418FD5C28CC16D000EA2D76 /* SearchViewController.swift */,
-				E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */,
+				E4334D1828DBCC0B002FA725 /* General */,
+				E4334D1728DBCC00002FA725 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +210,25 @@
 				E4F6104B28D384CD002ADA24 /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E4334D1728DBCC00002FA725 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E418FD5828CC06B400EA2D76 /* HomeViewController.swift */,
+				E418FD5A28CC16B700EA2D76 /* UpComingViewController.swift */,
+				E418FD5C28CC16D000EA2D76 /* SearchViewController.swift */,
+				E418FD5E28CC16E800EA2D76 /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E4334D1828DBCC0B002FA725 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E4334D1528DBCB76002FA725 /* SearchResultsViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F6105B28D3E83D002ADA24 /* TitleTableViewCell.swift in Sources */,
+				E4334D1628DBCB76002FA725 /* SearchResultsViewController.swift in Sources */,
 				E418FD5D28CC16D000EA2D76 /* SearchViewController.swift in Sources */,
 				E4F6105428D3D3CA002ADA24 /* TitleCollectionViewCell.swift in Sources */,
 				E418FD2C28CC01D200EA2D76 /* MainTabBarViewController.swift in Sources */,

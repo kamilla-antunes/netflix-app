@@ -84,8 +84,8 @@ class TitleTableViewCell: UITableViewCell {
             titlePosterImageView.heightAnchor.constraint(equalToConstant: 150),
             
             titlePlayButtonStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            titlePlayButtonStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titlePlayButtonStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            titlePlayButtonStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            titlePlayButtonStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             titlePlayButtonStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             
             titleLabelTitleImageStackView.trailingAnchor.constraint(equalTo: titlePlayButtonStackView.trailingAnchor, constant: -32)
